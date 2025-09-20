@@ -1,0 +1,15 @@
+<h2>Videos</h2>
+<ul>
+  <% videos.forEach(v => { %>
+    <li>
+      <video width="300" controls>
+        <source src="/uploads/<%= v.filename %>" type="video/mp4">
+      </video>
+    </li>
+  <% }) %>
+</ul>
+<form method="POST" action="/videos" enctype="multipart/form-data">
+  <input type="file" name="video" accept="video/*" required>
+  <button type="submit">Upload Video</button>
+</form>
+<a href="/">Back</a>

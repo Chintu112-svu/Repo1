@@ -1,0 +1,11 @@
+<h2>Images</h2>
+<ul>
+  <% images.forEach(img => { %>
+    <li><img src="/uploads/<%= img.filename %>" width="200"></li>
+  <% }) %>
+</ul>
+<form method="POST" action="/images" enctype="multipart/form-data">
+  <input type="file" name="image" accept="image/*" required>
+  <button type="submit">Upload Image</button>
+</form>
+<a href="/">Back</a>

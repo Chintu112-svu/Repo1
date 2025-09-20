@@ -1,0 +1,12 @@
+<h2>Notes</h2>
+<ul>
+  <% notes.forEach(n => { %>
+    <li><b><%= n.title %>:</b> <%= n.content %></li>
+  <% }) %>
+</ul>
+<form method="POST" action="/notes">
+  <input type="text" name="title" placeholder="Title" required>
+  <textarea name="content" placeholder="Content" required></textarea>
+  <button type="submit">Add Note</button>
+</form>
+<a href="/">Back</a>

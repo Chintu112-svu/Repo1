@@ -1,0 +1,12 @@
+<h2>Questions</h2>
+<ul>
+  <% questions.forEach(q => { %>
+    <li><b><%= q.question %></b> → <%= q.answer %></li>
+  <% }) %>
+</ul>
+<form method="POST" action="/questions">
+  <input type="text" name="question" placeholder="Question" required>
+  <input type="text" name="answer" placeholder="Answer" required>
+  <button type="submit">Add Question</button>
+</form>
+<a href="/">Back</a>
